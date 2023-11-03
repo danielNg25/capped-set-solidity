@@ -1,54 +1,8 @@
-# Solidity Template with Hardhat using EthersV6 [![Hardhat][hardhat-badge]][hardhat] [![License: MIT][license-badge]]
+# Capped Set Implementation
 
-:warning: This template uses Ethers V6. If you're familiar with Ethers V5, see migration guide here:
+## Deployed Address
 
--   [Hardhat Migration Guide](https://github.com/NomicFoundation/hardhat/releases/tag/%40nomicfoundation%2Fhardhat-toolbox%403.0.0)
--   [Ethers V6 Migration Guide](https://docs.ethers.org/v6/migrating/)
-
-[hardhat]: https://hardhat.org/
-[hardhat-badge]: https://img.shields.io/badge/Built%20with-Hardhat-FFDB1C.svg
-[license]: https://opensource.org/licenses/MIT
-[license-badge]: https://img.shields.io/badge/License-MIT-blue.svg
-
-A Hardhat-based template for developing smart contract in Solidity
-
--   [Hardhat](https://github.com/nomiclabs/hardhat): compile, run and test smart contracts
--   [TypeChain](https://github.com/ethereum-ts/TypeChain): generate TypeScript bindings for smart contracts
--   [Ethers](https://github.com/ethers-io/ethers.js/): renowned Ethereum library and wallet implementation
--   [Solhint](https://github.com/protofire/solhint): solidity linter
--   [Eslint](https://github.com/eslint/eslint): code linter
--   [Solcover](https://github.com/sc-forks/solidity-coverage): code coverage
--   [Prettier Plugin Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity): code formatter
--   [Husky](https://github.com/typicode/husky): Git hooks
-
-## Getting Started
-
-Click the [`Use this template`](https://github.com/ndtr2000/solidity-hardhat-template/generate) button at the top of the page to
-create a new repository with this repo as the initial state.
-
-## Features
-
-This template builds upon the frameworks and libraries mentioned above, so for details about their specific features,
-please consult their respective documentations.
-
-### Sensible Defaults
-
-This template comes with sensible default configurations in the following files:
-
-```text
-├── .commitlintrc.yml
-├── .editorconfig
-├── .eslintignore
-├── .eslintrc.yml
-├── .gitignore
-├── .prettierignore
-├── .prettierrc.yml
-├── .solcover.js
-├── .solhintignore
-├── .solhint.json
-├── .yarnrc.yml
-└── hardhat.config.ts
-```
+**BSC Testnet**: [0x1e4C827c99d3fBF3393a9C13BE06c2979FE5E958](https://testnet.bscscan.com/address/0x1e4C827c99d3fBF3393a9C13BE06c2979FE5E958)
 
 ## Usage
 
@@ -135,14 +89,3 @@ Deploy the contracts to Hardhat Network:
 ```sh
 $ yarn deploy --greeting "Bonjour, le monde!"
 ```
-
-### Fix husky not executable
-
-```sh
-chmod ug+x .husky/*
-chmod ug+x .git/hooks/*
-```
-
-## License
-
-[MIT](./LICENSE.md) © Nguyễn Đình Trường
