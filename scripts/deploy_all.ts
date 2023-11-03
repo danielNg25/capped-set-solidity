@@ -4,7 +4,7 @@ import { Signer } from "ethers";
 const ethers = hre.ethers;
 import { Config } from "./config";
 
-import { Greeter__factory, Greeter } from "../typechain-types";
+import { CappedSet__factory, CappedSet } from "../typechain-types";
 
 async function main() {
     //Loading accounts
@@ -12,8 +12,8 @@ async function main() {
     const admin = await accounts[0].getAddress();
     //Loading contracts' factory
 
-    const Greeter: Greeter__factory = await ethers.getContractFactory(
-        "Greeter",
+    const CappedSet: CappedSet__factory = await ethers.getContractFactory(
+        "CappedSet",
     );
 
     // Deploy contracts
@@ -27,15 +27,15 @@ async function main() {
 
     console.log("ACCOUNT: " + admin);
 
-    const greeter: Greeter = await Greeter.deploy(Config.greeter);
-    await greeter.waitForDeployment();
+    const cappedSet: CappedSet = await CappedSet.deploy(Config.capacity);
+    await cappedSet.waitForDeployment();
 
-    const greaterAddress = await greeter.getAddress();
+    const greaterAddress = await cappedSet.getAddress();
 
-    console.log("Greeter deployed at: ", greaterAddress);
+    console.log("cappedSet deployed at: ", greaterAddress);
 
     const contractAddress = {
-        greeter: greaterAddress,
+        cappedSet: greaterAddress,
     };
 
     fs.writeFileSync("contracts.json", JSON.stringify(contractAddress));

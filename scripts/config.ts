@@ -1,3 +1,3 @@
 export const Config = {
-    greeter: "Hello",
+    capacity: "100",
 };

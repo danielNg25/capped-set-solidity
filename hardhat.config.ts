@@ -99,6 +99,7 @@ const config: HardhatUserConfig = {
         enabled: process.env.REPORT_GAS ? true : false,
         excludeContracts: [],
         src: "./contracts",
+        outputFile: "./gas-report.txt",
     },
     typechain: {
         outDir: "typechain-types",

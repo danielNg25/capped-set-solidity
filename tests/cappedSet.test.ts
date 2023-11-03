@@ -3,14 +3,13 @@ import { expect } from "chai";
 import { ethers } from "hardhat";
 
 import { CappedSet__factory, CappedSet } from "../typechain-types";
-import { SignerWithAddress } from "@nomicfoundation/hardhat-ethers/signers";
 
 describe("CappedSet", () => {
     let cappedSet: CappedSet;
     let addresses: string[];
 
     beforeEach(async () => {
-        let accounts = await ethers.getSigners();
+        const accounts = await ethers.getSigners();
         addresses = accounts.slice(10).map((account) => account.address);
 
         const CappedSet: CappedSet__factory = <CappedSet__factory>(
@@ -90,7 +89,7 @@ describe("CappedSet", () => {
         });
 
         it("Should Insert items exceeding cap and boot out lowest item", async () => {
-            let { newLowestAddress, newLowestValue } =
+            const { newLowestAddress, newLowestValue } =
                 await cappedSet.insert.staticCall(addresses[5], 6);
             expect(newLowestAddress).to.equal(addresses[0]);
             expect(newLowestValue).to.equal(2n);
